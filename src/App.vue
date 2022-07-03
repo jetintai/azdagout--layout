@@ -1,25 +1,16 @@
 <template>
-  <div class="container">
-    <SimpleComponent @add-task="addTask" />
-  </div>
+    <div class="container">
+        <div class="row">
+            <RightNav></RightNav>
+        </div>
+    </div>
 </template>
 
 <script lang="ts" setup>
-import SimpleComponent from "@/components/SimpleComponent.vue";
+import RightNav from "@/components/main/RightNav";
 
 </script>
 
-<style lang = "scss" scoped>
-.container {
-  max-width: 650px;
-  width: 100%;
-  padding: 40px 16px;
-  margin-inline: auto;
-}
+<style lang="scss" scoped>
 
-@media screen and (min-width: 525px) {
-  .container {
-    padding: 64px 32px;
-  }
-}
 </style>

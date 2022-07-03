@@ -1,0 +1,33 @@
+$icons: (
+    'home': '/src/assets/img/home-svgrepo-com.svg',
+    'projects': '/src/assets/img/trello-svgrepo-com.svg',
+    'tags': '/src/assets/img/tags-svgrepo-com.svg',
+    'break': '/src/assets/img/food-svgrepo-com.svg',
+);
+
+$icon-sizes: (
+    'small' : 36px,
+    'medium': 46px,
+);
+
+.icon {
+    display: inline-block;
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+@each $name, $sz in $icon-sizes {
+    .icon-#{$name} {
+        width: $sz;
+        height: $sz;
+    }
+}
+
+@each $name, $url in $icons {
+    .icon-pack--#{$name} {
+        mask-image: url(#{$url});
+    }
+}
