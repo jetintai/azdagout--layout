@@ -17,7 +17,7 @@
 }
 .menu-main {
     background-color: $c-green-eagle;
-    position: absolute;
+    position: fixed;
     float: left;
     width: 100px !important;
     left: 0px;

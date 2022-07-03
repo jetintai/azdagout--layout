@@ -52,6 +52,7 @@ export default {
 }
 
 .description-icons {
+    text-align: center;
   &__item {
     margin: 0 15px;
   }

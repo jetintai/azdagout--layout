@@ -1,11 +1,27 @@
 .btn {
-  @include button-variant($c_green-bluish, $c_green-bluish);
-  @include font-regular-veritate;
-  --mo-btn-padding-x: 2.3rem;
-  --mo-btn-padding-y: 0.975rem;
+    @include button-variant($c_green-bluish, $c_green-bluish);
+    @include font-regular-veritate;
+    --mo-btn-padding-x: 2.3rem;
+    --mo-btn-padding-y: 0.975rem;
 }
 
 .btn-outline {
-  @include button-outline-variant($c_green-bluish);
-  --mo-btn-border-width: 2px;
+    @include button-outline-variant($c_green-bluish);
+    --mo-btn-border-width: 2px;
+}
+
+.head-title {
+    display: block;
+
+    &--main {
+        @include font-regular-nembus;
+        color: $c-green-opal;
+        margin: 10px 0 25px 0;
+    }
+
+    &--article {
+        @include font-regular-veritate;
+        color: $c-green-opal;
+        margin: 10px 0;
+    }
 }
