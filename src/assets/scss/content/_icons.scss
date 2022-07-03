@@ -1,33 +1,55 @@
+@use "sass:map";
+
 $icons: (
-    'home': '/src/assets/img/home-svgrepo-com.svg',
-    'projects': '/src/assets/img/trello-svgrepo-com.svg',
-    'tags': '/src/assets/img/tags-svgrepo-com.svg',
-    'break': '/src/assets/img/food-svgrepo-com.svg',
+        'home': '/src/assets/img/home-svgrepo-com.svg',
+        'projects': '/src/assets/img/trello-svgrepo-com.svg',
+        'tags': '/src/assets/img/tags-svgrepo-com.svg',
+        'break': '/src/assets/img/food-svgrepo-com.svg',
+);
+
+$prg-tools: (
+        'vue': '/src/assets/img/prg-tools/vuejs-3-1175070.webp',
+        'scss': '/src/assets/img/prg-tools/scss.png',
+        'eslint': '/src/assets/img/prg-tools/eslint-logo.png',
+        'typescript': '/src/assets/img/prg-tools/86_typescript.a7888501c2.png',
+        'nodejs': '/src/assets/img/prg-tools/node-js-2.png',
+        'nuxt': '/src/assets/img/prg-tools/nuxt.png',
+        'seequalize': '/src/assets/img/prg-tools/67_sequelize-icon.54c1e009e5.jpg'
 );
 
 $icon-sizes: (
-    'small' : 36px,
-    'medium': 46px,
+        'small' : 36px,
+        'medium': 46px,
+        'large': 86px,
 );
 
 .icon {
-    display: inline-block;
-    mask-position: 0 0;
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    width: 24px;
-    height: 24px;
+  display: inline-block;
+  mask-position: 0 0;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
 }
 
 @each $name, $sz in $icon-sizes {
-    .icon-#{$name} {
-        width: $sz;
-        height: $sz;
-    }
+  .icon-#{$name} {
+    width: $sz;
+    height: $sz;
+  }
 }
 
 @each $name, $url in $icons {
-    .icon-pack--#{$name} {
-        mask-image: url(#{$url});
-    }
+  .icon-pack--#{$name} {
+    mask-image: url(#{$url});
+  }
+}
+
+@each $name, $url in $prg-tools {
+  .icon-pack--#{$name} {
+    background-image: url(#{$url});
+  }
 }

@@ -1,0 +1,8 @@
+div.content {
+  padding-left: 100px;
+}
+
+p.content {
+  @include font-regular-mirach;
+  color: $c-deep-yellow-green;
+}
