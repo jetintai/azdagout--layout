@@ -10,3 +10,10 @@
     font-weight: bold;
 }
 
+@mixin font-regular-mirach {
+    font-family: Inter;
+    font-size: 1.1em;
+    line-height: 1.7em;
+    text-indent: 25px;
+    padding: 10px 0;
+}
