@@ -14,6 +14,12 @@ class ProjectsController {
         return [];
     }
 
+    static getTasks() {
+        if (Array.isArray(tasks) && tasks.length !== 0)
+            return tasks;
+        return [];
+    }
+
     static getProjects() {
         if (Array.isArray(projects) && projects.length !== 0)
             return projects;
