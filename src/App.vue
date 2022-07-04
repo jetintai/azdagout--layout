@@ -4,7 +4,7 @@
       <RightNav></RightNav>
     </div>
   </div>
-  <div class = "content">
+  <div class="content">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-  <router-view></router-view>
+    <router-view></router-view>
   </div>
 
 </template>

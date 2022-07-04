@@ -23,7 +23,7 @@ $icon-sizes: (
         'large': 86px,
 );
 
-.icon {
+@mixin az-icon {
   display: inline-block;
   mask-position: 0 0;
   mask-repeat: no-repeat;
@@ -31,6 +31,10 @@ $icon-sizes: (
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.icon {
+  @include az-icon;
   width: 24px;
   height: 24px;
 }
@@ -52,4 +56,12 @@ $icon-sizes: (
   .icon-pack--#{$name} {
     background-image: url(#{$url});
   }
+}
+
+.icon-ui-flag {
+  mask-image: url('/src/assets/img/ui/flag-svgrepo-com.svg');
+}
+
+.icon-ui-task {
+  mask-image: url('/src/assets/img/ui/content-exclusive-new-svgrepo-com.svg');
 }

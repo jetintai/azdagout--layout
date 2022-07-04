@@ -1,11 +1,28 @@
 <template>
-  <div class = "home page">This is project page</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="accordion" id="accordionFlushExample">
+          <ProjectSpoiler v-for="(project, index) in projects" :key="index" :project="project"></ProjectSpoiler>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-    name: 'ProjectsPage',
+import ProjectsController from "../../controllers/ProjectsController";
+import ProjectSpoiler from "@/components/ProjectSpoiler";
 
+
+export default {
+  name: 'ProjectsPage',
+  components: {ProjectSpoiler},
+  data() {
+    return {
+      projects: ProjectsController.getProjects(),
+    }
+  },
 }
 </script>
 

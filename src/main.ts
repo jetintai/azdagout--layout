@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createWebHistory, createRouter } from "vue-router";
 
 import App from './App.vue';
+import 'bootstrap';
 import './assets/scss/_main.scss';
 
 import Home from '@/components/views/HomePage.vue';

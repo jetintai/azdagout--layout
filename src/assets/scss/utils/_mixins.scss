@@ -17,3 +17,16 @@
     text-indent: 25px;
     padding: 10px 0;
 }
+
+@mixin font-regular-almach {
+    font-family: Inter;
+    font-size: 1em;
+}
+
+
+@mixin icon-flag {
+    width: 18px;
+    height: 18px;
+    background-color: $c-green-eagle;
+    cursor:pointer;
+}
